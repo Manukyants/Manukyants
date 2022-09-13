@@ -12,6 +12,11 @@ public class ControllerCalc {
 
     private final ServiseCalc serviseCalc = new ServiseCalc();
 
+    @GetMapping
+    public String privet (){
+        return "<h> Добро пожаловать в калькулятор <h>";
+    }
+
     @GetMapping("/plus")
     public String plus (@RequestParam(name = "num1", required = false)Integer a,
                        @RequestParam(name = "num2", required = false)Integer b){
